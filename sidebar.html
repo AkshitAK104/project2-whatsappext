@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="sidebar">
+    <h1>🧠 WhatsBlitz</h1>
+    
+    <input type="file" id="fileInput" accept=".csv" />
+    
+    <button id="previewBtn">🔍 Preview Messages</button>
+    
+    <div id="previewArea"></div>
+    
+    <hr>
+    
+    <button id="sendBtn">🚀 Start Sending</button>
+    
+    <button id="scheduleBtn">⏰ Schedule</button>
+    
+    <div>
+      <label>Delay Range (s):</label>
+      <input type="number" id="minDelay" placeholder="Min" value="5" min="1" max="60">
+      <input type="number" id="maxDelay" placeholder="Max" value="15" min="1" max="60">
+    </div>
+    
+    <div id="stats">
+      <p>Sent: <span id="sentCount">0</span></p>
+      <p>Failed: <span id="failCount">0</span></p>
+      <p>Status: <span id="statusMsg">Idle</span></p>
+    </div>
+  </div>
+  
+  <script src="ui.js"></script>
+</body>
+</html>

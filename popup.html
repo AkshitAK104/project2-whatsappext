@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>WhatsBlitz Popup</title>
+  <style>
+    body {
+      font-family: 'Orbitron', sans-serif;
+      background-color: #000;
+      color: #0ff;
+      padding: 10px;
+      width: 250px;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      background: #0ff;
+      color: #000;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 0 10px #0ff;
+    }
+    button:hover {
+      background: #00cccc;
+    }
+  </style>
+</head>
+<body>
+  <h2>⚡ WhatsBlitz</h2>
+  <p>Ready to auto-send messages?</p>
+  <button id="openWA">Open WhatsApp Web</button>
+
+  <script>
+    document.getElementById("openWA").addEventListener("click", () => {
+      chrome.tabs.create({ url: "https://web.whatsapp.com" });
+    });
+  </script>
+</body>
+</html>

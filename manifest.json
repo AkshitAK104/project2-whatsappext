@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "WhatsBlitz - Neural WhatsApp Commander",
+  "version": "1.0",
+  "description": "Automated personalized messaging on WhatsApp with a futuristic interface.",
+  "permissions": ["scripting", "tabs", "storage", "downloads", "alarms"],
+  "host_permissions": ["https://web.whatsapp.com/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [{
+    "matches": ["https://web.whatsapp.com/*"],
+    "js": ["content.js"]
+  }],
+  "web_accessible_resources": [{
+    "resources": ["sidebar.html", "styles.css", "ui.js"],
+    "matches": ["https://web.whatsapp.com/*"]
+  }]
+}
